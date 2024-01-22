@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: 0.2s ease-in-out;
+}
+/* navigation bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  align-items: center;
+}
+/* heading */
+.left {
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+.left h1 {
+  font-size: 35px;
+  color: rgb(0, 110, 255);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+h1 .head-name {
+  margin-top: 8px;
+  color: black;
+  font-weight: 500;
+  margin-left: 1px;
+}
+/* menu items */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+a {
+  text-decoration: none;
+  font-size: 17px;
+  color: rgb(58, 55, 55);
+}
+a:hover {
+  text-decoration: underline;
+}
+/* create account button */
+.btn {
+  background-color: rgb(6, 6, 75);
+  color: white;
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+/* main class for having equal padding */
+.main {
+  padding: 1rem;
+}
+
+/* container for cards */
+.cards-container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+/* card styling */
+.card {
+  width: 280px;
+  height: 600px;
+  background-color: white;
+  border: 3px solid rgb(161, 157, 157);
+}
+.card:hover {
+  border-image: linear-gradient(
+    180deg,
+    rgba(70, 4, 192, 1) 19%,
+    rgba(0, 212, 255, 1) 81%
+  );
+  border-image-slice: 1;
+   transform: scale(1.1);  
+}
+.card-main {
+  padding: 20px;
+}
+.name h4 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.name p {
+  color: gray;
+  font-size: 13px;
+  font-weight: 400;
+}
+.price {
+  margin: 30px 0px;
+  display: flex;
+  gap: 5px;
+  font-size: 25px;
+  
+}
+.price h5 {
+  font-size: 30px;
+  font-weight: 500;
+  display: inline;
+}
+.dollar{
+  font-weight: 600;
+  margin-top: 3px;
+  color: black;
+}
+
+span {
+  color: gray;
+  padding-bottom: 10px;
+  display: flex;
+  align-self: end;
+  margin-left: 5px;
+}
+/* button on card */
+.choose {
+  margin: 0px 0px 30px 0px;
+}
+.choose button {
+  border: 1px solid black;
+  padding: 5px 12px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+}
+/* styling on hover on button */
+.choose button:hover {
+  background: rgb(11, 10, 136);
+  background: linear-gradient(
+    135deg,
+    rgb(57, 57, 222) 22%,
+    rgba(50, 169, 200, 1) 99%
+  );
+  color: white;
+}
+
+hr {
+  color: gray;
+}
+
+/* content on cards */
+.content {
+  font-size: 13px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+ul {
+  list-style-type: disc;
+  display: inline-block;
+}
+
+li {
+  padding-bottom: 10px;
+}
+
+/* price on card */
+.pricing {
+  text-align: center;
+  padding-top: 90px;
+}
+.pricing h1 {
+  font-size: 60px;
+  font-weight: 600;
+  color: rgb(6, 6, 76);
+}
+.pricing p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: rgb(78, 74, 74);
+}
+
+/* toggle button of prices and monthly yearly package */
+.toggles{
+  display: flex;
+  justify-content: space-around;
+  margin: 0px auto
+  ;
+}
+/* toggle button container */
+.currency-toggler,.month-toggler{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:20px; 
+}
+/* values beside button */
+.currency-toggler span, .month-toggler span{
+  font-weight: 500;
+  font-size: 23px;
+}
+/* background of button */
+.toggler,.toggler-m{
+  width: 100px;
+  height: 38px;
+  background-color: rgb(8, 8, 97);
+  position: relative;
+  border-radius: 50px;
+  margin: 5px;
+}
+/* circle on button */
+.currency-toggler .toggler::before, .month-toggler .toggler-m::before{
+  content: '';
+  box-shadow: inset 2px -1px 7px #080f6c;
+  position: absolute;
+  top: 2px;
+  margin-left: 5px;
+  height: 33px;
+  width: 33px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s ease-out;
+}
+/* this class runs when button is on */
+.currency-toggler .toggler.active::before, .month-toggler .toggler-m.active::before{
+  left: calc(100% - 33px - 7px);
+}
+/* footer */
+.footer{
+  padding: 20px;
+  display: flex;
+  justify-content:space-around ;
+  border-top: 2px solid gray;
+  margin: 20px 50px 0px 50px;
+}
+.footer .left h1{
+  font-size: 50px;
+}
+.foot-right ul{
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.foot-right li{
+  list-style-type: none;
+}
+.foot-right p{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* styling for devices having max-width 700px */
+@media screen and (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .right,
+  .login {
+    display: none;
+  }
+  .pricing{
+    padding-top: 20px;
+  }
+  .toggles{
+    display: flex;
+    flex-direction: column;
+  }
+  .toggler,.toggler-m{
+    width: 81px;
+    height: 30px;
+  }
+  .currency-toggler .toggler::before, .month-toggler .toggler-m::before{
+    height: 18px;
+    width: 18px;
+  }
+  .card{
+    margin-bottom: 60px;
+  }
+  .left h1 {
+    font-size: 55px;
+  }
+  .footer{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .left h1{
+    font-size: 15px;
+  }
+  .foot-right{
+    margin: 20px auto;
+  }
+}
